@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="moviebox.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Student Total Score & Grade Calculator</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="box">
+
+        <!-- Student Name -->
+        <div class="mb-3">
+          <label for="studentName" class="form-label">Student Name</label>
+          <input type="text" class="form-control" id="studentName" placeholder="Enter student name">
+        </div>
+
+        <!-- Dynamic Subject Entry -->
+        <div id="subjectsContainer" class="mb-3">
+          <!-- Initial subject row -->
+          <div class="input-group mb-2">
+            <input type="text" class="form-control subject-name" placeholder="Subject Name">
+            <input type="number" class="form-control subject-score" placeholder="Score">
+            <button class="btn btn-danger" onclick="removeSubject(this)">Remove</button>
+          </div>
+        </div>
+
+        <!-- Add Subject Button -->
+        <button class="btn btn-outline-secondary mb-3" onclick="addSubject()">+ Add Subject</button>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-between mb-4">
+          <button class="btn btn-primary" onclick="calculate()">Calculate Result</button>
+          <button class="btn btn-dark" onclick="downloadPDF()">Download PDF</button>
+        </div>
+
+        <!-- Output -->
+        <div id="output" class="text-center"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
